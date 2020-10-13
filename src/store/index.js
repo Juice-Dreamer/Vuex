@@ -1,15 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
+import moduleA from './moduleA/index'
+import moduleB from './moduleB/index'
+Vue.use(Vuex) // 注册插件
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    a: moduleA,
+    b: moduleB
   }
 })
